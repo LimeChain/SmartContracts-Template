@@ -23,18 +23,18 @@ jobs:
       - run: npm install
       - run: cp config.sample.ts config.ts
       - run: npx hardhat compile
-      - name: Upload Build & Depps
-        uses: actions/upload-artifact@v2
+      - run: tar -zcf /tmp/repo.tar.gz .
+      - uses: actions/upload-artifact@v2
         with:
-          name: state
-          path: ./
+         name: workspace
+         path: /tmp/repo.tar.gz
 
   unit-tests:
     runs-on: ubuntu-latest
     needs: [compile]
     steps:
-      - name: Download Build & Depps
-        uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v2
         with:
-          path: ./
+          name: workspace
+          path: /tmp
       - run: npx hardhat test
