@@ -48,10 +48,13 @@ jobs:
           name: workspace
           path: ./
       - run: tar xf repo.tar.gz
-      - run: pip3 install crytic-compile
-      - run: pip3 install slither-analyzer
-      - run: slither . --sarif=sarifOutput
+      - uses: actions/checkout@v2
+      - uses: crytic/slither-action@v0.1.0
+        id: slither
+        continue-on-error: true
+        with:
+          sarif: results.sarif
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v1
         with:
-          sarif_file: ./sarifOutput
+          sarif_file: ${{ steps.slither.outputs.sarif }}
