@@ -20,6 +20,7 @@ This project is a template project consisting of:
 2. `git clone`
 3. `cp config.sample.ts config.ts`
 4. `npm install`
+5. After the first GitHub Actions run, update the Unit Tests badge (currently points to the Template repository)
 
 **Note**
 
