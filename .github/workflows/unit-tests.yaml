@@ -1,4 +1,4 @@
-name: Unit Tests
+name: Checks
 
 on: [push]
 
@@ -36,5 +36,6 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: workspace
-          path: /tmp
+          path: ./
+      - run: ls -la
       - run: npx hardhat test
