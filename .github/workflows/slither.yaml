@@ -6,6 +6,7 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     steps:
+      - run: pip3 install crytic-compile
       - name: Run Slither
         uses: crytic/slither-action@v0.1.0
         id: slither
