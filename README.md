@@ -3,7 +3,7 @@
 # Project Name
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Unit Tests](https://github.com/EnterDAO/LandWorks-protocol/actions/workflows/test.yml/badge.svg)](https://github.com/EnterDAO/LandWorks-protocol/actions/workflows/test.yml)
+[![UnitTests](https://github.com/LimeChain/SmartContracts-Template/actions/workflows/unit-tests.yaml/badge.svg?branch=main)](https://github.com/LimeChain/SmartContracts-Template/actions/workflows/unit-tests.yaml)
 
 </div>
 
