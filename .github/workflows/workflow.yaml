@@ -39,7 +39,7 @@ jobs:
           path: ./
       - run: tar xf repo.tar.gz
       - run: npx hardhat test
-  static-checks:
+  slither:
     runs-on: ubuntu-latest
     needs: [compile]
     steps:
