@@ -7,6 +7,8 @@
 
 </div>
 
+test
+
 This project is a template project consisting of:
 - Hardhat setup + usage of hardhat `tasks`
 - Typescript support
