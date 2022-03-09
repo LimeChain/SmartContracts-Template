@@ -50,7 +50,7 @@ jobs:
       - run: tar xf repo.tar.gz
       - run: pip3 install crytic-compile
       - run: pip3 install slither-analyzer
-      - run: sudo slither . --sarif=sarifOutput
+      - run: slither . --sarif=sarifOutput
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v1
         with:
