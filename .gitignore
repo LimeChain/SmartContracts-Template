@@ -1,0 +1,9 @@
+node_modules
+config.ts
+coverage
+coverage.json
+typechain
+
+#Hardhat files
+cache
+artifacts
